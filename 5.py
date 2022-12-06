@@ -37,7 +37,7 @@ for row in moves:
 # Part 2 | move crate stacks
 for row in moves:
     items, src, tgt = get_move_params(row)
-    stacks[tgt] = stacks[tgt] + stacks[src][-abs(items) :]  # place
+    stacks[tgt] = stacks[tgt] + stacks[src][-abs(items):]  # place
     stacks[src] = stacks[src][: -abs(items)]  # remove
 
 print(top_most_crates(stacks))
